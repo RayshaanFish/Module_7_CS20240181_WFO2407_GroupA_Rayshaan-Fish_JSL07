@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const cardForm = document.getElementById('cardForm');
     const modal = document.getElementById('modal');
@@ -7,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hide the modal initially
     modal.style.display = 'none';
   
+    // Submit event listener
     cardForm.addEventListener('submit', function (e) {
       e.preventDefault();
   
@@ -19,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const personalMessage = personalMessageInput.value;
       const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
   
+      // Validate fields are filled
       if (studentName.trim() === '' || personalMessage.trim() === '') {
         alert('Please fill in all fields');
         return;

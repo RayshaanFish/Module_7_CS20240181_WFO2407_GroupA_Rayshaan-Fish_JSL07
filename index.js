@@ -48,13 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear the form inputs
     studentNameInput.value = "";
     personalMessageInput.value = "";
-    if (courseNameInput) courseNameInput.value = "";
+    courseNameInput.value = "";
   });
 
-  //  🚨 Close the modal when the close button is clicked ***added an event listener***
-  window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
+  // 🚨 Close the modal when the close button is clicked ***added eventListener + fucntion***
+  closeModal.addEventListener("click", function () {
+    modal.style.display = "none";
   });
 });
